@@ -18,7 +18,7 @@ function Sidebar() {
                 <Card className='h-screen w-[6rem] p-4 shadow-2xl rounded-r-3xl'>
                     <div className='pl-3 mb-2 p-5'>
                         <IconButton className='rounded-full'>
-                            <SiCodenewbie className='w-5 h-5' />
+                            <SiCodenewbie className='w-5 h-5 text-cyan-600' />
                         </IconButton>
                     </div>
                     <hr className='my-3  ' />
