@@ -7,9 +7,14 @@ import {
     Badge,
     Chip,
 } from '@material-tailwind/react'
-function CardDocument({ documentTitle = 'Título do Documento' }) {
+function SimpleCardDocument({
+    documentTitle = 'Título do Documento',
+    colspan,
+}) {
     return (
-        <Card className='mt-6 w-96 shadow-none'>
+        <Card
+            className={`mt-6 bg-blue-gray-200/5shadow-md hover:shadow-xl col-span-${colspan} `}
+        >
             <div className='flex grid-col-2 gap-4 pt-4 pl-5'>
                 <Chip
                     className=''
@@ -45,4 +50,4 @@ function CardDocument({ documentTitle = 'Título do Documento' }) {
         </Card>
     )
 }
-export default CardDocument
+export default SimpleCardDocument

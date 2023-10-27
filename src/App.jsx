@@ -4,10 +4,15 @@ import MyRoutes from './routes/routes'
 
 function App() {
     return (
-        <div className='flex relative bg-blue-gray-200/10'>
-            <Sidebar />
-            <div className='p-9'>
-                <MyRoutes />
+        <div className=''>
+            <div className='flex relative '>
+                <div className='mr-12'>
+                    <Sidebar />
+                </div>
+
+                <div className='ml-12 p-9'>
+                    <MyRoutes />
+                </div>
             </div>
         </div>
     )
