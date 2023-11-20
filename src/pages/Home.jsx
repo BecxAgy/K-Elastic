@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SearchNav from '../components/SearchNav'
 import SimpleCardDocument from '../components/SimpleCardDocument'
-import { CardDocumentWithImage } from '../components/CardDocumentWithImage'
+
 import { BackgroundCard } from '../components/BackgroundCard'
 
 function Home() {
+    const [searchInput, setSearchInput] = useState('')
     return (
         <div className='grid grid-flow-row gap-8'>
             <SearchNav />
@@ -12,11 +13,12 @@ function Home() {
                 <SimpleCardDocument colspan={2} />
                 <BackgroundCard />
                 <SimpleCardDocument colspan={1} />
-                <CardDocumentWithImage />
+
                 <SimpleCardDocument />
-                <CardDocumentWithImage />
+
                 <SimpleCardDocument />
                 <SimpleCardDocument />
+                <BackgroundCard />
                 <SimpleCardDocument />
                 <SimpleCardDocument />
                 <SimpleCardDocument />

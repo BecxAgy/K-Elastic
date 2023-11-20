@@ -13,7 +13,7 @@ import { SiCodenewbie } from 'react-icons/si'
 
 function Sidebar() {
     return (
-        <div className='flex justify-center '>
+        <div className='h-[100vh] flex justify-center '>
             <Card className='fixed top-0 left-0 h-screen w-[6rem] p-4 shadow-2xl rounded-r-3xl bg-white'>
                 <div className='pl-3 mb-2 p-5'>
                     <IconButton className='rounded-full'>
