@@ -1,4 +1,4 @@
-export const api = 'http://plantsmart.kempetro.com.br/api'
+export const api = 'http://localhost:8000/elastic/'
 
 export const requestConfig = (method, data) => {
     let config
