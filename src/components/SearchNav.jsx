@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux'
 import { searchDocumentsBySynonyms } from '../slices/documentSlice'
 
 function SearchNav({ searchInput, setSearchInput }) {
-    //function para pegar o value do input e enviar para api
     const dispatch = useDispatch()
 
     useEffect(() => {
