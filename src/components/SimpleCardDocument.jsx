@@ -7,10 +7,7 @@ import {
     Badge,
     Chip,
 } from '@material-tailwind/react'
-function SimpleCardDocument({
-    documentTitle = 'Título do Documento',
-    colspan,
-}) {
+const SimpleCardDocument = ({ doc, colspan }) => {
     return (
         <Card
             className={`mt-6 bg-blue-gray-200/5shadow-md hover:shadow-xl col-span-${colspan} `}
@@ -32,7 +29,7 @@ function SimpleCardDocument({
 
             <CardBody>
                 <Typography variant='h5' color='blue-gray' className='mb-2'>
-                    {documentTitle}
+                    {}
                 </Typography>
                 <Typography>
                     Because it&apos;s about motivating the doers. Because

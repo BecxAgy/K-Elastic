@@ -1,26 +1,22 @@
 import { Input } from '@material-tailwind/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { LuSearch } from 'react-icons/lu'
+import { useDispatch } from 'react-redux'
+import { searchDocumentsBySynonyms } from '../slices/documentSlice'
 
-function SearchNav({searchInput, setSearchInput}) {
-     //function para pegar o value do input e enviar para api
+function SearchNav({ searchInput, setSearchInput }) {
+    //function para pegar o value do input e enviar para api
+    const dispatch = useDispatch()
 
-     const searchFunction = async(value)=>
-     {
-        debugger;
-            const response = await fetch(`http://localhost:8000/elastic/searchsynonyms?index=kempetro&body=${value}`)
-            .then((response) => response.json())
-            .catch((error) => console.log(error))
+    useEffect(() => {
+        dispatch(searchDocumentsBySynonyms(searchInput))
+    }, [searchInput])
 
-            const data =  response
-            console.log(data)
-     }
     return (
         <div className='w-96'>
-            <Input          
-                onChange={(e) => {
-                    setSearchInput(e.target.value )
-                    searchFunction(searchInput)
+            <Input
+                onChange={e => {
+                    setSearchInput(e.target.value)
                 }}
                 color='cyan'
                 className='border-none bg-blue-gray-200/10 rounded-xl  '
